@@ -2,7 +2,7 @@
 
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
-const Info = () => {
+const InfoAbout = () => {
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -32,4 +32,4 @@ const Info = () => {
         </motion.div>
     );
 };
-export default Info;
+export default InfoAbout;
