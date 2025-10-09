@@ -1,5 +1,6 @@
 "use client";
 
+import { experience } from "@/app/helpers/aboutVars";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 const Experience = () => {
@@ -10,8 +11,6 @@ const Experience = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: false, amount: 0.5 }}
-                // once:false = opnieuw afspelen bij scroll
-                // amount:0.5 = animatie start als 50% zichtbaar is
                 className="flex flex-col"
             >
                 <h3
@@ -35,13 +34,7 @@ const Experience = () => {
                     className="text-white"
                     style={{ fontFamily: "var(--font-quantico)" }}
                 >
-                    While I am at the beginning of my professional journey, I
-                    have gained hands-on experience by creating real-world
-                    projects at home. Through these projects I learned how to
-                    translate ideas into scalable applications, work with APIs,
-                    and deliver polished user experiences. I am eager to apply
-                    these skills in a professional environment and continue
-                    learning.
+                    {experience}
                 </p>
             </motion.div>
         </>

@@ -10,8 +10,6 @@ const Picture = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: false, amount: 0.5 }}
-                // once:false = opnieuw afspelen bij scroll
-                // amount:0.5 = animatie start als 50% zichtbaar is
                 className="flex flex-col justify-center gap-4 items-center"
             >
                 <Image

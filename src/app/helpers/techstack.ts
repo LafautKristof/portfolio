@@ -47,7 +47,7 @@ export const techStack: TechItem[] = [
 
     { name: "Prisma", icon: "prisma", variant: "dark" },
     {
-        name: "Node.js",
+        name: "Nodejs",
         icon: "nodejs",
     },
     { name: "AWS", icon: "aws" },
@@ -57,4 +57,6 @@ export const techStack: TechItem[] = [
     { name: "Shadcn UI", icon: "shadcnui", variant: "dark" },
     { name: "Vite", icon: "vitejs", variant: "dark" },
     { name: "VsCode", icon: "vscode", variant: "dark" },
+    { name: "Supabase", icon: "supabase" },
+    { name: "Express.js", icon: "expressjs", variant: "dark" },
 ];

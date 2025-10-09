@@ -16,11 +16,11 @@ const ContactMe = () => {
     });
     const [loading, setLoading] = useState(false);
     const handleEmailClick = () => {
-        window.location.href = "mailto:kristof.lafaut@gmail.com";
+        window.location.href = `mailto:${process.env.NEXT_PUBLIC_MY_EMAIL}`;
     };
 
     const handleWhatsAppClick = () => {
-        window.open("https://wa.me/32496929750", "_blank");
+        window.open(`process.env.NEXT_PUBLIC_WHATSAPP_LINK`, "_blank");
     };
 
     const handleChange = (

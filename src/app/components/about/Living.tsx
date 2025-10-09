@@ -1,4 +1,5 @@
 "use client";
+import { living } from "@/app/helpers/aboutVars";
 import { motion } from "framer-motion";
 import { LiaMapMarkerSolid } from "react-icons/lia";
 
@@ -9,8 +10,6 @@ const Living = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.5 }}
-            // once:false = opnieuw afspelen bij scroll
-            // amount:0.5 = animatie start als 50% zichtbaar is
             className="flex gap-2"
         >
             {" "}
@@ -18,7 +17,7 @@ const Living = () => {
                 className="text-white flex gap-2 items-center justify-center"
                 style={{ fontFamily: "var(--font-quantico)" }}
             >
-                <LiaMapMarkerSolid /> Grembergen, Belgium
+                <LiaMapMarkerSolid /> {living}
             </p>
         </motion.div>
     );

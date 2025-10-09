@@ -2,7 +2,7 @@
 
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
-const TitleProject = () => {
+const TitleProject = ({ project }: { project: string }) => {
     return (
         <>
             <motion.h1
@@ -13,7 +13,7 @@ const TitleProject = () => {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: false, amount: 0.5 }}
             >
-                Project Pokemon
+                {project}
             </motion.h1>
             <Separator className="mb-2" />
         </>
