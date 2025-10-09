@@ -9,10 +9,10 @@ import Title from "./Title";
 const AboutList = () => {
     return (
         <>
-            <div className="flex justify-center mt-6 mb-12">
+            <div className="flex justify-center sm:flex-row mt-6 mb-12">
                 <Title title="A Little About Me" />
             </div>
-            <div className="grid grid-cols-3 gap-6 max-w-6xl mx-auto ">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 <div className="flex flex-col gap-6 border-r-2 pr-4">
                     <Picture />
                     <InfoAbout />

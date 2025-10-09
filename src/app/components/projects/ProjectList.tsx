@@ -16,18 +16,24 @@ const ProjectList = () => {
                 <div className="border p-4 mb-8" key={index}>
                     <TitleProject project={project.name} />
 
-                    <div className="grid grid-cols-3  gap-6 max-w-6xl mx-auto">
-                        <div className="col-span-2 flex items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                        {/* Video bovenaan */}
+                        <div className="md:col-span-2 order-1">
                             <Video project={project.src} />
                         </div>
-                        <div className="col-span-1 gap-6">
+
+                        {/* InfoProject rechts op desktop, onder video op mobiel */}
+                        <div className="md:col-span-1 order-2">
                             <InfoProject project={project.info} />
                         </div>
-                        <div className="col-span-3 gap-6">
+
+                        {/* Tech stack altijd onderaan */}
+                        <div className="md:col-span-3 order-3">
                             <TechStackProject project={project.techStack} />
                         </div>
                     </div>
-                    <div className="flex justify-around mt-6">
+
+                    <div className="flex flex-row  justify-center md:justify-around gap-4 mt-6">
                         <GithubProject project={project.github} />
                         <LinkProject project={project.link} />
                     </div>
