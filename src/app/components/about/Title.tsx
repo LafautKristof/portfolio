@@ -26,7 +26,7 @@ const Title = ({ title }: { title: string }) => {
             variants={container}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.6 }} // start alleen 1x als zichtbaar
+            viewport={{ once: true, amount: 0.6 }} // start alleen 1x als zichtbaar
         >
             {letters.map((char, index) => (
                 <motion.span key={index} variants={child}>

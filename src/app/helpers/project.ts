@@ -1,7 +1,7 @@
 export const projects = [
     {
         name: "pokedex",
-        src: "/projectPokemon.mp4",
+        src: "/Projectpokemon.mp4",
         info: `I built this Pokémon app to practice full-stack development and
                 create something fun and interactive. It features a complete
                 Pokédex with search, type relations, and the ability to 'catch'

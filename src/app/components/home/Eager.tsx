@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+
 import { eager } from "@/app/helpers/homeVars";
 const Eager = () => {
     return (

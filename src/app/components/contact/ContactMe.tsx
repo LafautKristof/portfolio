@@ -2,11 +2,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import Link from "next/link";
 import { useState } from "react";
 
 import emailjs from "@emailjs/browser";
-import InfoContact from "./InfoContact";
+
 const ContactMe = () => {
     const [form, setForm] = useState({
         email: "",

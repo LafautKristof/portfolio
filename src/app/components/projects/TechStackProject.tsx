@@ -18,7 +18,7 @@ const TechStackProject = ({ project }: { project: string[] }) => {
                 className="flex flex-wrap gap-3 mb-4"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 variants={{
                     hidden: {},
                     visible: {

@@ -12,7 +12,7 @@ const TechStack = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.5 }}
             >
                 <h3
                     className="text-2xl font-bold text-white mb-4"
@@ -28,7 +28,7 @@ const TechStack = () => {
                 className="flex flex-wrap justify-center gap-4"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 variants={{
                     hidden: {},
                     visible: {
