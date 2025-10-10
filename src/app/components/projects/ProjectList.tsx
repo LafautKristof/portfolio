@@ -19,7 +19,10 @@ const ProjectList = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                         {/* Video bovenaan */}
                         <div className="md:col-span-2 order-1">
-                            <Video project={project.src} />
+                            <Video
+                                project={project.src}
+                                picture={project.picture}
+                            />
                         </div>
 
                         {/* InfoProject rechts op desktop, onder video op mobiel */}

@@ -10,7 +10,7 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog";
 
-const Video = ({ project }: { project: string }) => {
+const Video = ({ project, picture }: { project: string; picture: string }) => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -24,10 +24,12 @@ const Video = ({ project }: { project: string }) => {
                     viewport={{ once: true, amount: 0.5 }}
                 >
                     <video
+                        key={project}
                         autoPlay
                         muted
                         loop
                         playsInline
+                        poster={picture}
                         className="absolute top-[-42px] left-0 w-full h-auto rounded-md shadow-md"
                     >
                         <source src={project} type="video/mp4" />

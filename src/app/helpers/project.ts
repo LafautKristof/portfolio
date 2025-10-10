@@ -19,6 +19,7 @@ export const projects = [
         ],
         github: ["https://github.com/LafautKristof/pokedex"],
         link: "https://pokedex-dusky-theta-61.vercel.app",
+        picture: "/Projectpokemon.png",
     },
     {
         name: "chat",
@@ -47,5 +48,6 @@ export const projects = [
             "https://github.com/LafautKristof/chat_backend",
         ],
         link: "https://chat-frontend-one-steel.vercel.app/",
+        picture: "/chat.png",
     },
 ];
