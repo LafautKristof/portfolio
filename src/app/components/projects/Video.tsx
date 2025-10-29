@@ -9,6 +9,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog";
+import { fadeIn } from "@/app/helpers/motionVariants";
 
 const Video = ({ project, picture }: { project: string; picture: string }) => {
     const [open, setOpen] = useState(false);
@@ -18,10 +19,7 @@ const Video = ({ project, picture }: { project: string; picture: string }) => {
             <DialogTrigger asChild>
                 <motion.div
                     className="relative w-full h-80 overflow-hidden cursor-pointer"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    {...fadeIn}
                 >
                     <video
                         key={project}

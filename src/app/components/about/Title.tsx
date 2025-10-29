@@ -9,7 +9,7 @@ const Title = ({ title }: { title: string }) => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.05, // tijd tussen letters
+                staggerChildren: 0.05,
             },
         },
     };
@@ -26,11 +26,11 @@ const Title = ({ title }: { title: string }) => {
             variants={container}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.6 }} // start alleen 1x als zichtbaar
+            viewport={{ once: true, amount: 0.6 }}
         >
             {letters.map((char, index) => (
                 <motion.span key={index} variants={child}>
-                    {char === " " ? "\u00A0" : char} {/* spatie behouden */}
+                    {char === " " ? "\u00A0" : char}
                 </motion.span>
             ))}
         </motion.h1>

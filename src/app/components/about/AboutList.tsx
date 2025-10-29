@@ -13,13 +13,13 @@ const AboutList = () => {
                 <Title title="A Little About Me" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <div className="flex flex-col gap-6 border-r-2 pr-4">
+                <div className="flex flex-col gap-6 md:border-r-2 border-r-0 sm:pr-4 px-4 md:px-4 lg:px-10">
                     <Picture />
                     <InfoAbout />
                     <Living />
                 </div>
 
-                <div className="col-span-2 flex flex-col gap-6">
+                <div className="col-span-2 flex flex-col gap-6 px-4 md:px-4 lg:px-10">
                     <Education />
                     <Experience />
                     <TechStack />

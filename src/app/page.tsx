@@ -15,7 +15,7 @@ export default function Home() {
             <section id="projects" className="mt-40">
                 <ProjectList />
             </section>
-            <section id="contact" className="mt-200">
+            <section id="contact" className="mt-40">
                 <ContactList />
             </section>
         </>

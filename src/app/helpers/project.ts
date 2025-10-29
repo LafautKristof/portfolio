@@ -50,4 +50,27 @@ export const projects = [
         link: "https://chat-frontend-one-steel.vercel.app/",
         picture: "/chat.png",
     },
+    {
+        name: "strava-dashboard",
+        src: "/strava.mp4",
+        info: `I built this Strava-inspired app to deepen my full-stack development skills and combine my passion for sports and technology. 
+It allows users to visualize and analyze their activities with interactive maps, effort charts, heart rate data, and custom routes drawn on a Leaflet map. 
+The project also includes achievements, personal statistics, and real-time updates — turning raw activity data into meaningful insights. 
+It challenged me to work with APIs, data processing, geospatial visualization, and responsive UI design in one complete application.`,
+
+        techStack: [
+            "React",
+            "Next.js",
+            "Tailwind",
+            "TypeScript",
+            "VsCode",
+            "Vercel",
+            "Render",
+            "Python",
+            "Flask",
+        ],
+        github: [""],
+        link: "https://strava-dashboard-three-amber.vercel.app",
+        picture: "/strava.png",
+    },
 ];

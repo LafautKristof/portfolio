@@ -6,18 +6,18 @@ import TechStackProject from "./TechStackProject";
 import GithubProject from "./GithubProject";
 import LinkProject from "./LinkProject";
 import Title from "../about/Title";
+import { Project } from "@/types/project";
 const ProjectList = () => {
     return (
         <>
             <div className="flex justify-center mt-6 mb-12">
                 <Title title="A Few Projects" />
             </div>
-            {projects.map((project, index) => (
+            {projects.map((project: Project, index) => (
                 <div className="border p-4 mb-8" key={index}>
                     <TitleProject project={project.name} />
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                        {/* Video bovenaan */}
                         <div className="md:col-span-2 order-1">
                             <Video
                                 project={project.src}
@@ -25,12 +25,10 @@ const ProjectList = () => {
                             />
                         </div>
 
-                        {/* InfoProject rechts op desktop, onder video op mobiel */}
                         <div className="md:col-span-1 order-2">
                             <InfoProject project={project.info} />
                         </div>
 
-                        {/* Tech stack altijd onderaan */}
                         <div className="md:col-span-3 order-3">
                             <TechStackProject project={project.techStack} />
                         </div>
@@ -40,8 +38,6 @@ const ProjectList = () => {
                         <GithubProject project={project.github} />
                         <LinkProject project={project.link} />
                     </div>
-
-                    {/* second project */}
                 </div>
             ))}
         </>

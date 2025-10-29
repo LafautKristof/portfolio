@@ -2,18 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { fadeIn } from "@/app/helpers/motionVariants";
 const GithubProject = ({ project }: { project: string[] }) => {
     if (!Array.isArray(project)) {
         console.warn("⚠️ github: expected an array but got=>", project);
         return null;
     }
     return (
-        <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.5 }}
-        >
+        <motion.div {...fadeIn}>
             <div className="flex gap-4">
                 {project.map((project) => (
                     <Link

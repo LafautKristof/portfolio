@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 
 import emailjs from "@emailjs/browser";
+import { Mail, MessageCircle } from "lucide-react";
 
 const ContactMe = () => {
     const [form, setForm] = useState({
@@ -63,18 +64,22 @@ const ContactMe = () => {
             <div className="flex gap-4">
                 <Button
                     onClick={handleEmailClick}
-                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105"
+                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105 flex items-center justify-center gap-2"
                     style={{ fontFamily: "var(--font-quantico)" }}
                 >
-                    Send Me an Email
+                    {/* 🔹 Mobiel: alleen icoon */}
+                    <Mail className="w-6 h-6 sm:hidden" />
+                    {/* 🔹 Desktop: tekst */}
+                    <span className="hidden sm:inline">Send Me an Email</span>
                 </Button>
 
                 <Button
                     onClick={handleWhatsAppClick}
-                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105"
+                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105 flex items-center justify-center gap-2"
                     style={{ fontFamily: "var(--font-quantico)" }}
                 >
-                    WhatsApp Me
+                    <MessageCircle className="w-6 h-6 sm:hidden" />
+                    <span className="hidden sm:inline">WhatsApp Me</span>
                 </Button>
             </div>
             <div
