@@ -1,7 +1,7 @@
 export const projects = [
     {
         name: "pokedex",
-        src: "/Projectpokemon.mp4",
+        src: "/videos/Projectpokemon.mp4",
         info: `I built this Pokémon app to practice full-stack development and
                 create something fun and interactive. It features a complete
                 Pokédex with search, type relations, and the ability to 'catch'
@@ -23,7 +23,7 @@ export const projects = [
     },
     {
         name: "chat",
-        src: "/chat.mp4",
+        src: "/videos/chat.mp4",
         info: `I created this real-time chat app to explore WebSocket communication and
         full-stack integration between a Next.js frontend and an Express backend.
         Users can log in with Google, GitHub, or credentials and chat instantly
@@ -52,7 +52,7 @@ export const projects = [
     },
     {
         name: "strava-dashboard",
-        src: "/strava.mp4",
+        src: "/videos/strava.mp4",
         info: `I built this Strava-inspired app to deepen my full-stack development skills and combine my passion for sports and technology. 
 It allows users to visualize and analyze their activities with interactive maps, effort charts, heart rate data, and custom routes drawn on a Leaflet map. 
 The project also includes achievements, personal statistics, and real-time updates — turning raw activity data into meaningful insights. 
