@@ -67,9 +67,8 @@ const ContactMe = () => {
                     className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105 flex items-center justify-center gap-2"
                     style={{ fontFamily: "var(--font-quantico)" }}
                 >
-                    {/* 🔹 Mobiel: alleen icoon */}
                     <Mail className="w-6 h-6 sm:hidden" />
-                    {/* 🔹 Desktop: tekst */}
+
                     <span className="hidden sm:inline">Send Me an Email</span>
                 </Button>
 

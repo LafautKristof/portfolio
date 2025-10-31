@@ -63,13 +63,13 @@ const NavBar = () => {
                     icon={<MdOutlineMarkunread />}
                 />
                 <NavItem
-                    href="https://linkedin.com/in/jouwprofiel"
+                    href="https://linkedin.com/in/kristof-lafaut-061171206"
                     label="LinkedIn"
                     icon={<LiaLinkedinIn />}
                     external
                 />
                 <NavItem
-                    href="https://github.com/jouwgithub"
+                    href="https://github.com/LafautKristof"
                     label="GitHub"
                     icon={<RiGithubLine />}
                     external

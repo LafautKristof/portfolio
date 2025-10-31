@@ -69,7 +69,7 @@ It challenged me to work with APIs, data processing, geospatial visualization, a
             "Python",
             "Flask",
         ],
-        github: [""],
+        github: ["https://github.com/LafautKristof/strava_dashboard"],
         link: "https://strava-dashboard-three-amber.vercel.app",
         picture: "/strava.png",
     },
