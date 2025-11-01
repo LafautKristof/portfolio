@@ -8,7 +8,7 @@ const LinkProject = ({ project }: { project: string }) => {
         <motion.div {...fadeIn}>
             <Link href={project} target="_blank" rel="noopener noreferrer">
                 <Image
-                    src="/www.png"
+                    src="/link.png"
                     alt="Open GitHub repository for this project"
                     width={50}
                     height={50}

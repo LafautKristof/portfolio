@@ -1,7 +1,7 @@
 export type Project = {
     name: string;
     src: string;
-    picture: string;
+    alt: string;
     info: string;
     techStack: string[];
     github: string[];
