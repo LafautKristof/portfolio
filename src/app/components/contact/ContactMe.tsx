@@ -6,8 +6,6 @@ import { useState } from "react";
 
 import emailjs from "@emailjs/browser";
 import { Mail, MessageCircle } from "lucide-react";
-const EMAIL = process.env.NEXT_PUBLIC_MY_EMAIL ?? "";
-const WHATSAPP_LINK = process.env.NEXT_PUBLIC_WHATSAPP_LINK ?? "";
 const ContactMe = () => {
     const [form, setForm] = useState({
         email: "",
@@ -17,6 +15,7 @@ const ContactMe = () => {
     });
     const [loading, setLoading] = useState(false);
     const handleEmailClick = () => {
+        const EMAIL = process.env.NEXT_PUBLIC_MY_EMAIL ?? "";
         if (EMAIL) {
             window.location.href = `mailto:${EMAIL}`;
         } else {
@@ -25,20 +24,9 @@ const ContactMe = () => {
     };
 
     const handleWhatsAppClick = () => {
+        const WHATSAPP_LINK = process.env.NEXT_PUBLIC_WHATSAPP_LINK ?? "";
         if (typeof window !== "undefined" && WHATSAPP_LINK) {
-            const isMobile = /Android|iPhone|iPad|iPod/i.test(
-                navigator.userAgent
-            );
-            const base = isMobile
-                ? "https://wa.me/"
-                : "https://web.whatsapp.com/send";
-            const phone = "32496929750"; // zet hier je nummer zonder '+'
-            const message = "Hey Kristof, ik zag je portfolio!";
-            const url = isMobile
-                ? `${base}${phone}?text=${encodeURIComponent(message)}`
-                : `${base}?phone=${phone}&text=${encodeURIComponent(message)}`;
-
-            window.open(url, "_blank");
+            window.open(WHATSAPP_LINK, "_blank");
         } else {
             console.warn("❌ NEXT_PUBLIC_WHATSAPP_LINK ontbreekt in .env");
         }
