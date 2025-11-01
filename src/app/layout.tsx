@@ -33,6 +33,9 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} ${quantico.variable} antialiased w-full relative mt-6 bg-black text-black`}
             >
+                <div className="fixed inset-0 z-0">
+                    <div className="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#000000_1px)] bg-[size:20px_20px]"></div>
+                </div>
                 <NavBar />
                 <main className="px-4 mx-auto max-w-4xl relative">
                     {children}

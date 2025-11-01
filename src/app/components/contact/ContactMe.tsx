@@ -6,7 +6,8 @@ import { useState } from "react";
 
 import emailjs from "@emailjs/browser";
 import { Mail, MessageCircle } from "lucide-react";
-
+const EMAIL = process.env.NEXT_PUBLIC_MY_EMAIL ?? "";
+const WHATSAPP_LINK = process.env.NEXT_PUBLIC_WHATSAPP_LINK ?? "";
 const ContactMe = () => {
     const [form, setForm] = useState({
         email: "",
@@ -16,11 +17,31 @@ const ContactMe = () => {
     });
     const [loading, setLoading] = useState(false);
     const handleEmailClick = () => {
-        window.location.href = `mailto:${process.env.NEXT_PUBLIC_MY_EMAIL}`;
+        if (EMAIL) {
+            window.location.href = `mailto:${EMAIL}`;
+        } else {
+            console.warn("❌ NEXT_PUBLIC_MY_EMAIL ontbreekt in .env");
+        }
     };
 
     const handleWhatsAppClick = () => {
-        window.open(`process.env.NEXT_PUBLIC_WHATSAPP_LINK`, "_blank");
+        if (typeof window !== "undefined" && WHATSAPP_LINK) {
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(
+                navigator.userAgent
+            );
+            const base = isMobile
+                ? "https://wa.me/"
+                : "https://web.whatsapp.com/send";
+            const phone = "32496929750"; // zet hier je nummer zonder '+'
+            const message = "Hey Kristof, ik zag je portfolio!";
+            const url = isMobile
+                ? `${base}${phone}?text=${encodeURIComponent(message)}`
+                : `${base}?phone=${phone}&text=${encodeURIComponent(message)}`;
+
+            window.open(url, "_blank");
+        } else {
+            console.warn("❌ NEXT_PUBLIC_WHATSAPP_LINK ontbreekt in .env");
+        }
     };
 
     const handleChange = (
@@ -61,10 +82,10 @@ const ContactMe = () => {
 
     return (
         <div className="flex flex-col gap-4 border rounded-3xl min-w-full p-8">
-            <div className="flex gap-4">
+            <div className="flex gap-4 ">
                 <Button
                     onClick={handleEmailClick}
-                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105 flex items-center justify-center gap-2"
+                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105 hover:border-blue-600 flex items-center justify-center gap-2"
                     style={{ fontFamily: "var(--font-quantico)" }}
                 >
                     <Mail className="w-6 h-6 sm:hidden" />
@@ -74,7 +95,7 @@ const ContactMe = () => {
 
                 <Button
                     onClick={handleWhatsAppClick}
-                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105 flex items-center justify-center gap-2"
+                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105 hover:border-blue-600 flex items-center justify-center gap-2"
                     style={{ fontFamily: "var(--font-quantico)" }}
                 >
                     <MessageCircle className="w-6 h-6 sm:hidden" />
@@ -97,7 +118,7 @@ const ContactMe = () => {
                             value={form.email}
                             onChange={handleChange}
                             required
-                            className="text-gray-500  bg-gray-900"
+                            className="text-gray-500  bg-black"
                         />
                         <Input
                             type="text"
@@ -106,7 +127,7 @@ const ContactMe = () => {
                             value={form.name}
                             onChange={handleChange}
                             required
-                            className="text-gray-500  bg-gray-900"
+                            className="text-gray-500  bg-black"
                         />
                         <Input
                             type="text"
@@ -115,7 +136,7 @@ const ContactMe = () => {
                             value={form.subject}
                             onChange={handleChange}
                             required
-                            className="text-gray-500  bg-gray-900"
+                            className="text-gray-500  bg-black"
                         />
                         <Textarea
                             name="message"
@@ -123,10 +144,10 @@ const ContactMe = () => {
                             value={form.message}
                             onChange={handleChange}
                             required
-                            className="text-gray-500 h-50 bg-gray-900"
+                            className="text-gray-500 h-50 bg-black"
                         />
                         <Button
-                            className="flex-1 py-2 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105"
+                            className="flex-1 py-2 text-white rounded-xl border shadow-md hover:transition-transform hover:border-blue-600 hover:scale-105"
                             type="submit"
                             disabled={loading}
                         >
