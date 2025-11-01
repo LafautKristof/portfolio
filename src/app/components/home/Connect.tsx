@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
 const Connect = () => {
