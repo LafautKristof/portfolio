@@ -9,7 +9,6 @@ export default function TechBadge({ tech }: { tech: Tech }) {
     const [isTouch, setIsTouch] = useState(false);
 
     useEffect(() => {
-        // Detecteer touch-apparaten (geen hover)
         const touch = window.matchMedia("(hover: none)").matches;
         setIsTouch(touch);
     }, []);
@@ -28,13 +27,14 @@ export default function TechBadge({ tech }: { tech: Tech }) {
             whileTap={
                 isTouch
                     ? {
-                          scale: 1.1,
-                          rotate: Math.random() < 0.5 ? -3 : 3,
+                          scale: [1, 1.1, 1],
+                          rotate: [0, Math.random() < 0.5 ? -5 : 5, 0],
+                          transition: { duration: 0.4, ease: "easeOut" },
                       }
                     : undefined
             }
             transition={{ type: "spring", stiffness: 300 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-500 bg-gray-800/40 text-white shadow-sm backdrop-blur-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-500 bg-gray-800/40 text-white shadow-sm backdrop-blur-sm select-none"
         >
             <StackIcon
                 name={tech.icon}

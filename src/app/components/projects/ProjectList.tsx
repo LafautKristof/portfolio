@@ -24,6 +24,7 @@ const ProjectList = () => {
                             <PreviewProject
                                 src={project.src}
                                 alt={project.alt}
+                                link={project.link}
                             />
                         </div>
 

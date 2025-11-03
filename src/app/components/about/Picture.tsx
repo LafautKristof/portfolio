@@ -7,18 +7,24 @@ const Picture = () => {
     return (
         <>
             <motion.div
-                className="flex flex-col justify-center gap-4 items-center"
-                {...fadeIn}
+                className="relative flex flex-col justify-center gap-4 items-center"
+                animate={{ y: [0, -10, 0], scale: [1, 1.02, 1] }}
+                transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
             >
+                <div className="absolute inset-0 rounded-full blur-2xl bg-cyan-400/20 scale-110"></div>
                 <Image
                     src="/kristof.jpg"
                     alt="Picture of Kristof Lafaut"
                     width={200}
                     height={200}
-                    className="rounded-full"
+                    className="rounded-full relative z-10 shadow-xl"
                 />
-                <Separator className="mb-2" />
             </motion.div>
+            <Separator className="mb-2 relative z-10" />
         </>
     );
 };
