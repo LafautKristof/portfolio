@@ -180,6 +180,9 @@ textarea:-webkit-autofill {
     --accent-color: #3b82f6; /* blauw */
 }
 
+[data-theme="red"] {
+    --accent-color: #ef4444;
+}
 [data-theme="purple"] {
     --accent-color: #a855f7;
 }
@@ -198,10 +201,6 @@ textarea:-webkit-autofill {
 
 [data-theme="pink"] {
     --accent-color: #ec4899;
-}
-
-[data-theme="red"] {
-    --accent-color: #ef4444;
 }
 
 [data-theme="lightblue"] {

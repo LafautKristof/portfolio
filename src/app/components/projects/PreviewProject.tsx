@@ -25,8 +25,13 @@ export default function PreviewProject({
                     fill
                     className="object-cover transition-transform duration-500 hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 flex items-center justify-center text-[var(--accent-color)] font-semibold transition-opacity duration-500 text-2xl">
-                    <p className="bg-black p-2">{alt}</p>
+                <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 flex items-end justify-center text-[var(--accent-color)] font-semibold transition-opacity duration-500 text-2xl rounded-2xl">
+                    <p
+                        className="bg-black p-2 rounded-md"
+                        style={{ fontFamily: "var(--font-quantico)" }}
+                    >
+                        {alt}
+                    </p>
                 </div>
             </motion.div>
         </Link>

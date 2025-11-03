@@ -5,6 +5,7 @@ import {
     MdOutlinePermContactCalendar,
     MdOutlineCode,
     MdOutlineMarkunread,
+    MdOutlineSettings,
 } from "react-icons/md";
 import { LiaLinkedinIn } from "react-icons/lia";
 import { RiGithubLine } from "react-icons/ri";
@@ -39,8 +40,7 @@ const themes = [
 ] as const;
 const NavItem = ({ href, label, icon, external }: NavItemProps) => {
     const classes =
-        "text-2xl cursor-pointer hover:text-[var(--accent-color)] hover:scale-110 transition-transform duration-200";
-
+        " inline-block text-2xl cursor-pointer transition-transform duration-300 hover:scale-110 hover:rotate-12 hover:text-[var(--accent-color)]";
     return (
         <div className="relative group">
             {external ? (
@@ -71,11 +71,17 @@ const NavBar = () => {
     const handleThemeChange = (color: string) => {
         setTheme(color);
         document.documentElement.setAttribute("data-theme", color);
-        setOpen(false); // ✅ sluit popover na klik
+        localStorage.setItem("theme", color);
+        setOpen(false);
     };
-
     useEffect(() => {
-        document.documentElement.setAttribute("data-theme", theme);
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            setTheme(savedTheme);
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        } else {
+            document.documentElement.setAttribute("data-theme", theme);
+        }
     }, []);
     return (
         <div className="flex justify-center mt-20">
@@ -109,30 +115,34 @@ const NavBar = () => {
                     external
                 />
                 <Popover open={open} onOpenChange={setOpen}>
-                    <PopoverTrigger asChild>
-                        <button
-                            className="text-3xl text-white hover:text-[var(--accent-color)] transition-transform hover:rotate-90 duration-300 z-10"
-                            title="Change Theme"
-                        >
-                            <CiSettings />
-                        </button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-52 bg-neutral-900 text-white border border-gray-700 rounded-xl p-4 z-10">
-                        <div className="grid grid-cols-5 gap-4">
-                            {themes.map((t) => (
-                                <button
-                                    key={t.name}
-                                    onClick={() => handleThemeChange(t.name)}
-                                    style={{ backgroundColor: t.color }}
-                                    className={`w-8 h-8 rounded-full hover:scale-110 transition-transform border-2 ${
-                                        theme === t.name
-                                            ? "border-white"
-                                            : "border-transparent"
-                                    }`}
-                                />
-                            ))}
-                        </div>
-                    </PopoverContent>
+                    <div className="relative group">
+                        <PopoverTrigger asChild>
+                            <button className="text-2xl  hover:text-[var(--accent-color)] transition-transform hover:rotate-90 duration-300 z-10">
+                                <MdOutlineSettings />
+                            </button>
+                        </PopoverTrigger>
+                        <span className="absolute bottom-full mb-2 hidden group-hover:block px-2 py-1 text-sm text-white rounded whitespace-nowrap">
+                            Theme
+                        </span>
+                        <PopoverContent className="w-52 bg-neutral-900 text-white border border-gray-700 rounded-xl p-4 z-10">
+                            <div className="grid grid-cols-5 gap-4">
+                                {themes.map((t) => (
+                                    <button
+                                        key={t.name}
+                                        onClick={() =>
+                                            handleThemeChange(t.name)
+                                        }
+                                        style={{ backgroundColor: t.color }}
+                                        className={`w-8 h-8 rounded-full hover:scale-110 transition-transform border-2 ${
+                                            theme === t.name
+                                                ? "border-white"
+                                                : "border-transparent"
+                                        }`}
+                                    />
+                                ))}
+                            </div>
+                        </PopoverContent>
+                    </div>
                 </Popover>
             </nav>
         </div>
