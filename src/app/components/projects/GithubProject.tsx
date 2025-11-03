@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/app/helpers/motionVariants";
+import { FaGithub } from "react-icons/fa";
 const GithubProject = ({ project }: { project: string[] }) => {
     if (!Array.isArray(project)) {
         console.warn("⚠️ github: expected an array but got=>", project);
@@ -17,13 +18,9 @@ const GithubProject = ({ project }: { project: string[] }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         key={project}
+                        className=" hover:text-[var(--accent-color)] text-white"
                     >
-                        <Image
-                            src="/github-white-icon.png"
-                            alt="github"
-                            width={50}
-                            height={50}
-                        />
+                        <FaGithub size={50} />
                     </Link>
                 ))}
             </div>

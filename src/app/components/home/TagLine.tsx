@@ -20,9 +20,10 @@ const TagLine = () => {
                     className="flex flex-col justify-center"
                     {...fadeIn}
                 >
-                    <p className="max-w-2xl mx-auto text-center text-lg sm:text-xl text-gray-300">
-                        {text}
-                    </p>
+                    <p
+                        className="max-w-2xl mx-auto text-center text-lg sm:text-xl text-gray-300 "
+                        dangerouslySetInnerHTML={{ __html: text }}
+                    ></p>
                 </motion.div>
             </div>
         </>

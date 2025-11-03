@@ -13,7 +13,7 @@ const InfoAbout = () => {
             >
                 {infoAbout}
             </p>
-            <Separator className="my-4" />
+            <Separator className="my-4 bg-[var(--accent-color)]" />
         </motion.div>
     );
 };

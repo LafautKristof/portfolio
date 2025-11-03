@@ -1,5 +1,5 @@
 "use client";
-import { fadeIn } from "@/app/helpers/motionVariants";
+
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -15,7 +15,7 @@ const Picture = () => {
                     ease: "easeInOut",
                 }}
             >
-                <div className="absolute inset-0 rounded-full blur-2xl bg-cyan-400/20 scale-110"></div>
+                <div className="absolute inset-0 rounded-full blur-2xl bg-[var(--accent-color)]/50 scale-110"></div>
                 <Image
                     src="/kristof.jpg"
                     alt="Picture of Kristof Lafaut"
@@ -24,7 +24,7 @@ const Picture = () => {
                     className="rounded-full relative z-10 shadow-xl"
                 />
             </motion.div>
-            <Separator className="mb-2 relative z-10" />
+            <Separator className="mb-2 relative z-10 bg-[var(--accent-color)]" />
         </>
     );
 };

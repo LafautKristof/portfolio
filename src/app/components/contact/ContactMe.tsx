@@ -69,11 +69,11 @@ const ContactMe = () => {
     };
 
     return (
-        <div className="flex flex-col gap-4 border rounded-3xl min-w-full p-8">
+        <div className="flex flex-col gap-4 border border-[var(--accent-color)] text-white rounded-3xl min-w-full p-8">
             <div className="flex gap-4 ">
                 <Button
                     onClick={handleEmailClick}
-                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105 hover:border-blue-600 flex items-center justify-center gap-2"
+                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105 hover:border-[var(--accent-color)] flex items-center justify-center gap-2 hover:text-[var(--accent-color)]"
                     style={{ fontFamily: "var(--font-quantico)" }}
                 >
                     <Mail className="w-6 h-6 sm:hidden" />
@@ -83,15 +83,15 @@ const ContactMe = () => {
 
                 <Button
                     onClick={handleWhatsAppClick}
-                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105 hover:border-blue-600 flex items-center justify-center gap-2"
+                    className="flex-1 py-6 text-white rounded-xl border shadow-md hover:transition-transform hover:scale-105 hover:border-[var(--accent-color)] flex items-center justify-center gap-2 hover:text-[var(--accent-color)]"
                     style={{ fontFamily: "var(--font-quantico)" }}
                 >
                     <MessageCircle className="w-6 h-6 sm:hidden" />
-                    <span className="hidden sm:inline">WhatsApp Me</span>
+                    <span className="hidden sm:inline ">WhatsApp Me</span>
                 </Button>
             </div>
             <div
-                className="text-white flex justify-center text-sm pt-8 pb-8"
+                className=" flex justify-center text-sm pt-8 pb-8 text-[var(--accent-color)]"
                 style={{ fontFamily: "var(--font-quantico)" }}
             >
                 or send me a message
@@ -106,7 +106,7 @@ const ContactMe = () => {
                             value={form.email}
                             onChange={handleChange}
                             required
-                            className="text-gray-500  bg-black"
+                            className="text-gray-500  bg-black border-[var(--accent-color)]"
                         />
                         <Input
                             type="text"
@@ -115,7 +115,7 @@ const ContactMe = () => {
                             value={form.name}
                             onChange={handleChange}
                             required
-                            className="text-gray-500  bg-black"
+                            className="text-gray-500  bg-black border-[var(--accent-color)]"
                         />
                         <Input
                             type="text"
@@ -124,7 +124,7 @@ const ContactMe = () => {
                             value={form.subject}
                             onChange={handleChange}
                             required
-                            className="text-gray-500  bg-black"
+                            className="text-gray-500  bg-black border-[var(--accent-color)]"
                         />
                         <Textarea
                             name="message"
@@ -132,10 +132,10 @@ const ContactMe = () => {
                             value={form.message}
                             onChange={handleChange}
                             required
-                            className="text-gray-500 h-50 bg-black"
+                            className="text-gray-500 h-50 bg-black border-[var(--accent-color)]"
                         />
                         <Button
-                            className="flex-1 py-2 text-white rounded-xl border shadow-md hover:transition-transform hover:border-blue-600 hover:scale-105"
+                            className="flex-1 py-2 text-white hover:text-[var(--accent-color)] rounded-xl border shadow-md hover:transition-transform border-[var(--accent-color)] hover:scale-105"
                             type="submit"
                             disabled={loading}
                         >

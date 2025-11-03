@@ -11,12 +11,12 @@ const Education = () => {
             className="flex flex-col  justify-start"
         >
             <h3
-                className="text-2xl font-bold mb-4 text-white"
+                className="text-2xl font-bold mb-4 text-[var(--accent-color)]"
                 style={{ fontFamily: "var(--font-quantico)" }}
             >
                 Education
             </h3>
-            <Separator className="mb-2" />
+            <Separator className="mb-2 bg-[var(--accent-color)]" />
             <div className="gap-4">
                 <div className="text-white flex items-center justify-between mb-4">
                     <div
@@ -28,7 +28,7 @@ const Education = () => {
                     </div>
                     <p>june 2025</p>
                 </div>
-                <Separator className="bg-gray-800 w-16 h-[10px] mb-2" />
+                <Separator className=" w-16 h-[10px] mb-2 bg-[var(--accent-color)]" />
                 <div className="text-white flex items-center justify-between mb-4">
                     <div
                         className="text-lg flex flex-col"
@@ -39,7 +39,7 @@ const Education = () => {
                     </div>
                     <p>june 2024</p>
                 </div>
-                <Separator className="bg-gray-800 w-16 h-[10px] mb-2" />
+                <Separator className="bg-[var(--accent-color)] w-16 h-[10px] mb-2" />
             </div>
         </motion.div>
     );

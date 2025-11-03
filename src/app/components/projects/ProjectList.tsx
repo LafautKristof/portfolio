@@ -16,7 +16,10 @@ const ProjectList = () => {
                 <Title title="A Few Projects" />
             </div>
             {projects.map((project: Project, index) => (
-                <div className="border p-4 mb-8" key={index}>
+                <div
+                    className="border border-[var(--accent-color)] p-4 mb-8"
+                    key={index}
+                >
                     <TitleProject project={project.name} />
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">

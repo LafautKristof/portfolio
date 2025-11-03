@@ -7,13 +7,13 @@ const TitleProject = ({ project }: { project: string }) => {
     return (
         <>
             <motion.h1
-                className="text-2xl font-bold mb-4 text-white"
+                className="text-2xl font-bold mb-4 text-[var(--accent-color)]"
                 style={{ fontFamily: "var(--font-quantico)" }}
                 {...fadeIn}
             >
                 {project}
             </motion.h1>
-            <Separator className="mb-2" />
+            <Separator className="mb-2 bg-[var(--accent-color)]" />
         </>
     );
 };

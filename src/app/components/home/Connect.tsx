@@ -6,7 +6,7 @@ const Connect = () => {
             href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-40 flex justify-center items-center px-6 py-3 text-white border rounded-full shadow-md transition-all duration-300 hover:border-blue-600 hover:scale-105"
+            className="w-40 flex justify-center items-center px-6 py-3 text-white border rounded-full shadow-md transition-all duration-300 hover:text-[var(--accent-color)] hover:border-[var(--accent-color)] hover:scale-105"
             style={{ fontFamily: "var(--font-quantico)" }}
         >
             <span className="text-lg flex items-center gap-2">

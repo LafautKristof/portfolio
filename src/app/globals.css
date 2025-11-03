@@ -63,7 +63,7 @@ html {
         270deg,
         #000000,
         #1a1a1a,
-        #2563eb,
+        var(--accent-color),
         #1a1a1a,
         #000000
     );
@@ -84,7 +84,7 @@ html {
 }
 
 .animate-gradient {
-    background: linear-gradient(90deg, #2563eb, #ffffff, #6b7280);
+    background: linear-gradient(90deg, var(--accent-color), #ffffff, #6b7280);
     background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -174,4 +174,43 @@ input:-webkit-autofill,
 textarea:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #111827 inset !important; /* bg-gray-900 */
     -webkit-text-fill-color: #9ca3af !important; /* text-gray-500 */
+}
+
+:root {
+    --accent-color: #3b82f6; /* blauw */
+}
+
+[data-theme="purple"] {
+    --accent-color: #a855f7;
+}
+
+[data-theme="orange"] {
+    --accent-color: #f97316;
+}
+
+[data-theme="green"] {
+    --accent-color: #22c55e;
+}
+
+[data-theme="yellow"] {
+    --accent-color: #ffdf20;
+}
+
+[data-theme="pink"] {
+    --accent-color: #ec4899;
+}
+
+[data-theme="red"] {
+    --accent-color: #ef4444;
+}
+
+[data-theme="lightblue"] {
+    --accent-color: #74d4ff;
+}
+
+[data-theme="brown"] {
+    --accent-color: #82181a;
+}
+[data-theme="lightgreen"] {
+    --accent-color: #9ae630;
 }

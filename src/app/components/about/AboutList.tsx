@@ -13,7 +13,7 @@ const AboutList = () => {
                 <Title title="A Little About Me" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <div className="flex flex-col gap-6 md:border-r-2 border-r-0 sm:pr-4 px-4 md:px-4 lg:px-10">
+                <div className="flex flex-col gap-6 md:border-r-2 md:border-[var(--accent-color)] border-r-0 sm:pr-4 px-4 md:px-4 lg:px-10">
                     <Picture />
                     <InfoAbout />
                     <Living />

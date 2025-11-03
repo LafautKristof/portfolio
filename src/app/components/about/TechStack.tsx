@@ -10,12 +10,12 @@ const TechStack = () => {
         <section className="flex flex-col gap-6">
             <motion.div {...fadeIn}>
                 <h3
-                    className="text-2xl font-bold text-white mb-4"
+                    className="text-2xl font-bold text-[var(--accent-color)] mb-4"
                     style={{ fontFamily: "var(--font-quantico)" }}
                 >
                     Tech Stack
                 </h3>
-                <Separator className="mb-2" />
+                <Separator className=" bg-[var(--accent-color)]" />
             </motion.div>
             -
             <motion.div
