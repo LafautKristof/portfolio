@@ -218,3 +218,31 @@ html,
 body {
     overflow-x: hidden;
 }
+
+/* Placeholder kleur gelijk aan accent color */
+input::placeholder,
+textarea::placeholder {
+    color: var(--accent-color);
+    opacity: 0.6; /* optioneel */
+}
+
+/* Focus border kleur aanpassen */
+input:focus,
+textarea:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 6px rgba(83, 255, 171, 0.4);
+    outline: none !important;
+}
+
+/* Autofill achtergrond & tekst fixen */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--accent-color) !important; /* tekstkleur */
+    transition: background-color 50000s ease-in-out 0s; /* achtergrond transparant houden */
+    box-shadow: 0 0 0px 1000px black inset !important; /* forceer zwarte achtergrond */
+    border-color: var(--accent-color) !important; /* randkleur */
+}
