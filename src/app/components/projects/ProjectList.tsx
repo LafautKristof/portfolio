@@ -18,25 +18,11 @@ const ProjectList = () => {
                 ></p>
             </div>
             <div
-                className="
-        w-screen 
-        relative left-1/2 -translate-x-1/2
-        overflow-hidden
-        px-4          
-        sm:px-6       
-        lg:px-10        
+                className="w-screen relative left-1/2 -translate-x-1/2 overflow-hidden px-4 sm:px-6 lg:px-10        
     "
             >
                 <div
-                    className="
-        grid 
-        grid-cols-1
-        sm:grid-cols-2
-        lg:grid-cols-3
-        gap-6 
-        py-6
-        max-w-[2000px]
-        mx-auto
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  py-6 max-w-[2000px] mx-auto
     "
                 >
                     {projects.map((project: Project, index) => (

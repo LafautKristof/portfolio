@@ -73,16 +73,7 @@ const ContactMe = () => {
             <div className="flex gap-4 ">
                 <Button
                     onClick={handleEmailClick}
-                    className="
-  flex-1 py-6 
-  text-[var(--accent-color)] 
-  rounded-xl 
-  border border-[var(--accent-color)]
-  shadow-md 
-  transition-transform 
-  hover:scale-105
-  flex items-center justify-center gap-2
-"
+                    className="flex-1 py-6 text-[var(--accent-color)] rounded-xl border border-[var(--accent-color)] shadow-md transition-transform hover:scale-105 flex items-center justify-center gap-2 cursor-pointer"
                     style={{ fontFamily: "var(--font-quantico)" }}
                 >
                     <Mail className="w-6 h-6 sm:hidden" />
@@ -92,16 +83,7 @@ const ContactMe = () => {
 
                 <Button
                     onClick={handleWhatsAppClick}
-                    className="
-  flex-1 py-6 
-  text-[var(--accent-color)] 
-  rounded-xl 
-  border border-[var(--accent-color)]
-  shadow-md 
-  transition-transform 
-  hover:scale-105
-  flex items-center justify-center gap-2
-"
+                    className="flex-1 py-6 text-[var(--accent-color)] rounded-xl border border-[var(--accent-color)] shadow-md transition-transform hover:scale-105 flex items-center justify-center gap-2 cursor-pointer"
                     style={{ fontFamily: "var(--font-quantico)" }}
                 >
                     <MessageCircle className="w-6 h-6 sm:hidden" />
@@ -124,7 +106,7 @@ const ContactMe = () => {
                             value={form.email}
                             onChange={handleChange}
                             required
-                            className="text-[var(--accent-color)]  bg-black border-[var(--accent-color)]"
+                            className="text-[var(--accent-color)]  bg-black border-[var(--accent-color)] cursor-pointer"
                         />
                         <Input
                             type="text"
@@ -133,7 +115,7 @@ const ContactMe = () => {
                             value={form.name}
                             onChange={handleChange}
                             required
-                            className="text-[var(--accent-color)]  bg-black border-[var(--accent-color)]"
+                            className="text-[var(--accent-color)] bg-black border-[var(--accent-color)] cursor-pointer"
                         />
                         <Input
                             type="text"
@@ -142,7 +124,7 @@ const ContactMe = () => {
                             value={form.subject}
                             onChange={handleChange}
                             required
-                            className="text-[var(--accent-color)] bg-black border-[var(--accent-color)]"
+                            className="text-[var(--accent-color)] bg-black border-[var(--accent-color)] cursor-pointer"
                         />
                         <Textarea
                             name="message"
@@ -150,10 +132,10 @@ const ContactMe = () => {
                             value={form.message}
                             onChange={handleChange}
                             required
-                            className="text-[var(--accent-color)] h-50 bg-black border-[var(--accent-color)]"
+                            className="text-[var(--accent-color)] h-50 bg-black border-[var(--accent-color)] cursor-pointer"
                         />
                         <Button
-                            className="flex-1 py-2 text-[var(--accent-color)] rounded-xl border shadow-md hover:transition-transform border-[var(--accent-color)] hover:scale-105"
+                            className="flex-1 py-2 text-[var(--accent-color)] rounded-xl border shadow-md hover:transition-transform border-[var(--accent-color)] hover:scale-105 cursor-pointer"
                             type="submit"
                             disabled={loading}
                         >

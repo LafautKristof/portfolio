@@ -18,21 +18,7 @@ const PreviewImageProject = ({ project }: { project: Project }) => {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <div
-                    className="
-            relative 
-            rounded-lg 
-            overflow-hidden 
-            group 
-            cursor-pointer 
-            transition-transform duration-300 hover:scale-[1.03]
-
-            w-full           
-            max-w-sm         
-            mx-auto             
-            sm:max-w-none 
-        "
-                >
+                <div className="relative rounded-lg overflow-hidden group cursor-pointer transition-transform duration-300 hover:scale-[1.03] w-full max-w-sm mx-auto sm:max-w-none">
                     <Image
                         src={project.src}
                         alt={project.alt}
@@ -42,14 +28,7 @@ const PreviewImageProject = ({ project }: { project: Project }) => {
                     />
 
                     <div
-                        className="
-                            absolute bottom-0 left-0 right-0
-                            bg-black/60 backdrop-blur-sm
-                            text-white text-center
-                            py-2 px-3
-                            text-sm font-medium
-                            border-2 border-[var(--accent-color)] border-t-0
-                        "
+                        className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm text-white text-center py-2 px-3 text-sm font-medium border-2 border-[var(--accent-color)] border-t-0"
                         style={{ fontFamily: "var(--font-quantico)" }}
                     >
                         {project.name}
@@ -57,33 +36,11 @@ const PreviewImageProject = ({ project }: { project: Project }) => {
                 </div>
             </DialogTrigger>
 
-            {/* --- DIALOG CONTENT --- */}
             <DialogContent
-                className="
-        w-[95vw]
-        max-w-[600px]
-        sm:max-w-[800px]
-        lg:max-w-3xl
-
-        max-h-[85vh]         /* MOBILE scroll */
-        overflow-y-auto      /* MOBILE scroll */
-
-        lg:max-h-none        /* DESKTOP: no height limit */
-        lg:overflow-visible  /* DESKTOP: no scroll */
-
-        bg-black 
-        border border-[var(--accent-color)]
-        rounded-xl
-        p-4
-    "
+                className="w-[95vw] max-w-[600px] sm:max-w-[800px] lg:max-w-3xl max-h-[85vh] overflow-y-auto lg:max-h-none lg:overflow-visible bg-black border border-[var(--accent-color)] rounded-xl p-4"
                 style={{ fontFamily: "var(--font-quantico)" }}
             >
-                <DialogClose
-                    className=" absolute top-4 right-4 rounded-full bg-black/60 backdrop-blur text-[var(--accent-color)] p-2 transition-transform duration-300 hover:rotate-180         border-none outline-none           /* remove border */
-        focus:outline-none focus:ring-0    /* remove focus ring */
-        active:outline-none                /* remove click outline */
-    "
-                >
+                <DialogClose className=" absolute top-4 right-4 rounded-full bg-black/60 backdrop-blur text-[var(--accent-color)] p-2 transition-transform duration-300 hover:rotate-180 border-none outline-none focus:outline-none focus:ring-0active:outline-none">
                     <IoMdClose size={30} />
                 </DialogClose>
                 <Image
