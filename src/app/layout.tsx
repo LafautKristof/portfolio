@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "Kristof's portfolio",
     description: "Portfolio full stack developer",
+    icons: {
+        icon: "/myfavicon.png",
+        shortcut: "/myfavicon.png",
+    },
 };
 const quantico = Quantico({
     weight: ["400", "700"],
