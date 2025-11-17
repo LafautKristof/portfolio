@@ -85,8 +85,8 @@ export const projects = [
     },
     {
         name: "Code Snippet Vault",
-        src: "/picture_code_snippet_vault.png",
-        info: "...",
+        src: "/picture_snippet.png",
+        info: "Snippet Vault is an app designed for all developers: you can browse a growing collection of useful code snippets or create and manage your own. With tagging, search, and a built-in editor, it provides a simple and structured way to keep your most important code always at hand.",
         techStack: [
             "Next.js",
             "React",
@@ -98,7 +98,7 @@ export const projects = [
             "MongoDB",
         ],
         github: ["https://github.com/LafautKristof/code_snippet_vault"],
-        link: "https://code-snippet-vault.vercel.app/",
+        link: "https://code-snippet-vault-delta.vercel.app/",
         alt: "Code Snippet Vault",
     },
     {
