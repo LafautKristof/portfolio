@@ -18,9 +18,14 @@ const GithubProject = ({ project }: { project: string[] }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         key={project}
-                        className=" hover:text-[var(--accent-color)] text-white"
                     >
-                        <FaGithub size={50} />
+                        <motion.div
+                            whileHover={{ scale: 1.15, rotate: 5 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="text-white hover:text-[var(--accent-color)]"
+                        >
+                            <FaGithub size={50} />
+                        </motion.div>
                     </Link>
                 ))}
             </div>

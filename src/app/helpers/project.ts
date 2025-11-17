@@ -1,16 +1,13 @@
 export const projects = [
     {
         name: "Strava Dashboard",
-        src: "/port_strava.png",
-        info: `I built this Strava-inspired app to deepen my full-stack development skills and combine my passion for sports and technology. 
-It allows users to visualize and analyze their activities with interactive maps, effort charts, heart rate data, and custom routes drawn on a Leaflet map. 
-The project also includes achievements, personal statistics, and real-time updates — turning raw activity data into meaningful insights. 
-It challenged me to work with APIs, data processing, geospatial visualization, and responsive UI design in one complete application.`,
+        src: "/picture_strava.png",
+        info: `I built this Strava-inspired app for personal use, combining my interest in sports with full-stack development. It lets me explore my own activity data through interactive maps, charts, heart-rate analysis, custom routes, and achievements. The project helped me deepen my skills in APIs, data visualization, and geospatial mapping.`,
 
         techStack: [
             "React",
             "Next.js",
-            "Tailwind",
+            "Tailwind CSS",
             "TypeScript",
             "VsCode",
             "Vercel",
@@ -24,17 +21,12 @@ It challenged me to work with APIs, data processing, geospatial visualization, a
     },
     {
         name: "Pokedex",
-        src: "/port_pokemon.png",
-        info: `I built this Pokémon app to practice full-stack development and
-                create something fun and interactive. It features a complete
-                Pokédex with search, type relations, and the ability to 'catch'
-                and manage your own collection. The project let me work with
-                database design, infinite scrolling, and responsive UI combining
-                playful content with real technical challenges.`,
+        src: "/picture_pokedex.png",
+        info: `Built out of a mix of full-stack learning and childhood nostalgia, this Pokémon app delivers a fun and interactive experience. It features a complete Pokédex with search, type relations, and the ability to “catch” and manage your own collection. The project provided hands-on practice with database design, infinite scrolling, and responsive UI — blending playful content with real technical challenges.`,
         techStack: [
             "React",
             "Next.js",
-            "Tailwind",
+            "Tailwind CSS",
             "TypeScript",
             "MongoDB",
             "VsCode",
@@ -45,15 +37,33 @@ It challenged me to work with APIs, data processing, geospatial visualization, a
         alt: "Pokedex",
     },
     {
+        name: "Belgian Checkin",
+        src: "/belgian-checkin.png",
+        info: `Created as part of my final graduation project, this Belgian Checking app brought together mapping, categorization, and user-driven location tracking in one complete experience. The platform allowed users to check in at Belgian landmarks, explore locations on an interactive map, and review their personal activity history.
+<br>
+              <span class="text-[var(--accent-color)] ">  The live version has since been taken offline, but anyone interested in seeing a demo or preview can always contact me — I’m happy to share it.</span>`,
+        techStack: [
+            "Next.js",
+            "React",
+            "Tailwind",
+            "TypeScript",
+            "MariaDB",
+            "VsCode",
+            "PHP",
+            "Laravel",
+            "AWS",
+        ],
+        github: [
+            "https://github.com/LafautKristof/eindwerk_frontend",
+            "https://github.com/LafautKristof/eindwerk_backend",
+        ],
+
+        alt: "Belgian Checking App",
+    },
+    {
         name: "Chat",
         src: "/port_chat.png",
-        info: `I created this real-time chat app to explore WebSocket communication and
-        full-stack integration between a Next.js frontend and an Express backend.
-        Users can log in with Google, GitHub, or credentials and chat instantly
-        with others using live updates powered by Socket.IO. The project also
-        includes emoji and GIF support, typing indicators, and dynamic conversation
-        management. It taught me a lot about authentication flows, database
-        relationships, and building smooth, real-time user experiences.`,
+        info: `Built as a full real-time communication platform, this chat app connects a Next.js frontend with an Express backend over WebSockets. It features Google, GitHub, and credential-based authentication, instant messaging powered by Socket.IO, emoji and GIF support, typing indicators, and dynamic conversation handling. The project demonstrates solid control over authentication flows, database relationships, and creating smooth, real-time user experiences across the entire stack.`,
         techStack: [
             "React",
             "Next.js",
@@ -72,5 +82,38 @@ It challenged me to work with APIs, data processing, geospatial visualization, a
         ],
         link: "https://chat-frontend-one-steel.vercel.app/",
         alt: "Chat App",
+    },
+    {
+        name: "Todo App",
+        src: "/picture_todo.png",
+        info: `This Todo app was built as a clean and modern task management tool, focusing on usability, responsiveness, and a polished UI. It features category filtering, collapsible task details, animated interactions, pagination, and real-time updates powered by state management with Redux Toolkit Query. The interface is styled with Shadcn UI and Tailwind CSS, offering a smooth and intuitive user experience. It’s a practical full-stack style project that showcases component design, API integration, and structured state handling.`,
+        techStack: [
+            "React",
+            "Tailwind CSS",
+            "TypeScript",
+            "VsCode",
+            "Shadcn UI",
+        ],
+        github: ["https://github.com/LafautKristof/todo_shadcn"],
+        link: "https://todo_shadcn_portfolio.surge.sh/",
+        alt: "Todo App",
+    },
+    {
+        name: "Grid Color Generator",
+        src: "/picture_grid_color_generator.png",
+        info: "This Grid Color Generator is a playful visual tool that creates dynamic, multi-colored grids with customizable rows, columns, and color sets. It includes real-time generation, color statistics, and a clean, interactive UI built with React and TypeScript. The project focuses on smooth user interactions, responsive design, and clear state management, making it a fun yet polished showcase of front-end development and component architecture.",
+        techStack: ["React", "CSS", "TypeScript", "VsCode", "Shadcn UI"],
+        github: ["https://github.com/LafautKristof/strava_dashboard"],
+        link: "https://grid-color-generator.surge.sh/",
+        alt: "Grid Color Generator",
+    },
+    {
+        name: "Quote Generator",
+        src: "/picture_quote_generator.png",
+        info: "This Quote Generator app delivers short pieces of advice fetched from a public API, presented with smooth loading animations and custom-styled toasts for feedback. It features real-time updates, refresh-on-demand functionality, and a clean, responsive UI. The project highlights API consumption, state management, component structure, and polished UI interactions in a lightweight, user-friendly tool.",
+        techStack: ["Next.js", "React", "Tailwind", "TypeScript", "VsCode"],
+        github: ["https://github.com/LafautKristof/quote-generator"],
+        link: "https://https://quote-generator-kristof-lafaut.surge.sh/",
+        alt: "Quote Generator",
     },
 ];

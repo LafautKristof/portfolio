@@ -213,3 +213,8 @@ textarea:-webkit-autofill {
 [data-theme="lightgreen"] {
     --accent-color: #9ae630;
 }
+
+html,
+body {
+    overflow-x: hidden;
+}

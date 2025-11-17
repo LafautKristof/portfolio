@@ -1,51 +1,49 @@
 import { projects } from "@/app/helpers/project";
-import TitleProject from "./TitleProject";
 
-import InfoProject from "./InfoProject";
-import TechStackProject from "./TechStackProject";
-import GithubProject from "./GithubProject";
-import LinkProject from "./LinkProject";
 import Title from "../about/Title";
 import { Project } from "@/types/project";
-import PreviewProject from "./PreviewProject";
+
+import { text, title } from "@/app/helpers/projectVars";
+import PreviewImageProject from "./PreviewImageProject";
 
 const ProjectList = () => {
     return (
         <>
-            <div className="flex justify-center mt-6 mb-12">
-                <Title title="A Few Projects" />
+            <div className="flex flex-col justify-center mt-6 mb-12 gap-4">
+                <Title title={title} />
+                <p
+                    className="max-w-2xl mx-auto text-center text-lg sm:text-xl text-gray-300 "
+                    dangerouslySetInnerHTML={{ __html: text }}
+                    style={{ fontFamily: "var(--font-quantico)" }}
+                ></p>
             </div>
-            {projects.map((project: Project, index) => (
+            <div
+                className="
+        w-screen 
+        relative left-1/2 -translate-x-1/2
+        overflow-hidden
+        px-4          
+        sm:px-6       
+        lg:px-10        
+    "
+            >
                 <div
-                    className="border border-[var(--accent-color)] p-4 mb-8"
-                    key={index}
+                    className="
+        grid 
+        grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-3
+        gap-6 
+        py-6
+        max-w-[2000px]
+        mx-auto
+    "
                 >
-                    <TitleProject project={project.name} />
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                        <div className="md:col-span-2 order-1">
-                            <PreviewProject
-                                src={project.src}
-                                alt={project.alt}
-                                link={project.link}
-                            />
-                        </div>
-
-                        <div className="md:col-span-1 order-2">
-                            <InfoProject project={project.info} />
-                        </div>
-
-                        <div className="md:col-span-3 order-3">
-                            <TechStackProject project={project.techStack} />
-                        </div>
-                    </div>
-
-                    <div className="flex flex-row  justify-center md:justify-around gap-4 mt-6">
-                        <GithubProject project={project.github} />
-                        <LinkProject project={project.link} />
-                    </div>
+                    {projects.map((project: Project, index) => (
+                        <PreviewImageProject key={index} project={project} />
+                    ))}
                 </div>
-            ))}
+            </div>
         </>
     );
 };

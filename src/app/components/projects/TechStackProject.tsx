@@ -29,7 +29,6 @@ const TechStackProject = ({ project }: { project: string[] }) => {
                     <TechBadge key={tech!.name} tech={tech!} />
                 ))}
             </motion.div>
-            <Separator className="mb-2 bg-[var(--accent-color)]" />
         </>
     );
 };

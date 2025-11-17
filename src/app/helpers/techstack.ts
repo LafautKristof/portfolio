@@ -59,4 +59,6 @@ export const techStack: TechItem[] = [
     { name: "VsCode", icon: "vscode", variant: "dark" },
     { name: "Supabase", icon: "supabase" },
     { name: "Express.js", icon: "expressjs", variant: "dark" },
+    { name: "Render", icon: "render", variant: "dark" },
+    { name: "MariaDB", icon: "mariadb" },
 ];
