@@ -46,7 +46,7 @@ const PreviewImageProject = ({ project }: { project: Project }) => {
                 <Image
                     src={project.src}
                     alt={project.alt}
-                    width={1200}
+                    width={1000}
                     height={800}
                     className="w-full h-auto rounded-lg mt-12 border-4 border-[var(--accent-color)]"
                 />
