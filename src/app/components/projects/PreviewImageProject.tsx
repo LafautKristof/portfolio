@@ -43,19 +43,20 @@ const PreviewImageProject = ({ project }: { project: Project }) => {
                 <DialogClose className=" absolute top-4 right-4 rounded-full bg-black/60 backdrop-blur text-[var(--accent-color)] p-2 transition-transform duration-300 hover:rotate-180 border-none outline-none focus:outline-none focus:ring-0active:outline-none">
                     <IoMdClose size={30} />
                 </DialogClose>
-                <Image
-                    src={project.src}
-                    alt={project.alt}
-                    width={1000}
-                    height={800}
-                    className="w-full h-auto rounded-lg mt-12 border-4 border-[var(--accent-color)]"
-                />
-
-                <DialogHeader>
-                    <DialogTitle className="text-[var(--accent-color)]">
-                        {project.name}
-                    </DialogTitle>
-                </DialogHeader>
+                <DialogTitle className="text-[var(--accent-color)] mb-6 mt-6">
+                    {project.name}
+                </DialogTitle>
+                <div className="flex gap-6">
+                    <Image
+                        src={project.src}
+                        alt={project.alt}
+                        width={500}
+                        height={500}
+                        className="w-full max-w-[400px] mx-auto h-auto rounded-lg  border-4 border-[var(--accent-color)]"
+                    />
+                    <TechStackProject project={project.techStack} />
+                </div>
+                <DialogHeader></DialogHeader>
 
                 {project.info && (
                     <p
@@ -64,7 +65,6 @@ const PreviewImageProject = ({ project }: { project: Project }) => {
                     ></p>
                 )}
 
-                <TechStackProject project={project.techStack} />
                 <div className="flex items-center justify-around">
                     {project.github.length > 0 && (
                         <GithubProject project={project.github} />
