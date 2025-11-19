@@ -117,6 +117,15 @@ export const projects = [
         alt: "Todo App",
     },
     {
+        name: "Checker Game",
+        src: "/picture_checkers.png",
+        info: "This Checker Game is a classic two-player board game built with React and TypeScript. It features a responsive design, smooth drag-and-drop piece movement, turn-based gameplay, and basic AI for solo play. The project highlights component architecture, state management, and user interaction handling in a fun and engaging way.",
+        techStack: ["React", "Tailwind CSS", "TypeScript", "VsCode"],
+        github: ["https://github.com/LafautKristof/checkers"],
+        link: "https://checkers-snowy.vercel.app/checkers",
+        alt: "Checker Game",
+    },
+    {
         name: "Grid Color Generator",
         src: "/picture_grid_color_generator.png",
         info: "This Grid Color Generator is a playful visual tool that creates dynamic, multi-colored grids with customizable rows, columns, and color sets. It includes real-time generation, color statistics, and a clean, interactive UI built with React and TypeScript. The project focuses on smooth user interactions, responsive design, and clear state management, making it a fun yet polished showcase of front-end development and component architecture.",
@@ -131,7 +140,7 @@ export const projects = [
         info: "This Quote Generator app delivers short pieces of advice fetched from a public API, presented with smooth loading animations and custom-styled toasts for feedback. It features real-time updates, refresh-on-demand functionality, and a clean, responsive UI. The project highlights API consumption, state management, component structure, and polished UI interactions in a lightweight, user-friendly tool.",
         techStack: ["Next.js", "React", "Tailwind", "TypeScript", "VsCode"],
         github: ["https://github.com/LafautKristof/quote-generator"],
-        link: "https://https://quote-generator-kristof-lafaut.surge.sh/",
+        link: "https://quote-generator-kristof-lafaut.surge.sh/",
         alt: "Quote Generator",
     },
 ];
