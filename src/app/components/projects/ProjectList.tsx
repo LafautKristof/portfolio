@@ -5,7 +5,13 @@ import { Project } from "@/types/project";
 
 import { text, title } from "@/app/helpers/projectVars";
 import PreviewImageProject from "./PreviewImageProject";
-
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
 const ProjectList = () => {
     return (
         <>
@@ -21,14 +27,24 @@ const ProjectList = () => {
                 className="w-screen relative left-1/2 -translate-x-1/2 overflow-hidden px-4 sm:px-6 lg:px-10        
     "
             >
-                <div
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  py-6 max-w-[2000px] mx-auto
-    "
-                >
-                    {projects.map((project: Project, index) => (
-                        <PreviewImageProject key={index} project={project} />
-                    ))}
-                </div>
+                <Carousel>
+                    <CarouselContent>
+                        {projects.map((project: Project, index) => (
+                            <CarouselItem key={index} className="basis-1/3">
+                                <PreviewImageProject
+                                    key={index}
+                                    project={project}
+                                />
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/60 backdrop-blur text-[var(--accent-color)] p-2 rounded-full border-none outline-none focus:outline-none focus:ring-0 active:outline-none hover:scale-110 transition-transform">
+                        ‹
+                    </CarouselPrevious>
+                    <CarouselNext className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/60 backdrop-blur text-[var(--accent-color)] p-2 rounded-full border-none outline-none focus:outline-none focus:ring-0 active:outline-none hover:scale-110 transition-transform">
+                        ›
+                    </CarouselNext>
+                </Carousel>
             </div>
         </>
     );

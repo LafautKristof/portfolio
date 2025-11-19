@@ -4,34 +4,38 @@ import {
     Dialog,
     DialogTrigger,
     DialogContent,
-    DialogHeader,
     DialogTitle,
     DialogClose,
 } from "@/components/ui/dialog";
+
 import TechStackProject from "./TechStackProject";
 import { IoMdClose } from "react-icons/io";
 import GithubProject from "./GithubProject";
-import { Link } from "lucide-react";
+
 import LinkProject from "./LinkProject";
 
 const PreviewImageProject = ({ project }: { project: Project }) => {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <div className="relative rounded-lg overflow-hidden group cursor-pointer transition-transform duration-300 hover:scale-[1.03] w-full max-w-sm mx-auto sm:max-w-none">
-                    <Image
-                        src={project.src}
-                        alt={project.alt}
-                        width={500}
-                        height={500}
-                        className="w-full h-auto object-cover border-2 border-[var(--accent-color)]"
-                    />
+                <div className="relative w-full mx-auto sm:max-w-none rounded-lg border-2 border-[var(--accent-color)] overflow-hidden">
+                    <div className="group cursor-pointer transition-transform duration-300 hover:scale-[1.03]">
+                        <div className="overflow-hidden rounded-t-lg h-[300px]">
+                            <Image
+                                src={project.src}
+                                alt={project.alt}
+                                width={500}
+                                height={500}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
 
-                    <div
-                        className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm text-white text-center py-2 px-3 text-sm font-medium border-2 border-[var(--accent-color)] border-t-0"
-                        style={{ fontFamily: "var(--font-quantico)" }}
-                    >
-                        {project.name}
+                        <div
+                            className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm text-white text-center py-2 px-3 text-sm font-medium border-t-2 border-[var(--accent-color)]"
+                            style={{ fontFamily: "var(--font-quantico)" }}
+                        >
+                            {project.name}
+                        </div>
                     </div>
                 </div>
             </DialogTrigger>
@@ -46,17 +50,18 @@ const PreviewImageProject = ({ project }: { project: Project }) => {
                 <DialogTitle className="text-[var(--accent-color)] mb-6 mt-6">
                     {project.name}
                 </DialogTitle>
-                <div className="flex gap-6">
+
+                <div className="flex flex-col lg:flex-row gap-6">
                     <Image
                         src={project.src}
                         alt={project.alt}
                         width={500}
                         height={500}
-                        className="w-full max-w-[400px] mx-auto h-auto rounded-lg  border-4 border-[var(--accent-color)]"
+                        className="w-full max-w-[350px] h-auto rounded-lg border-4 border-[var(--accent-color)] mx-auto"
                     />
+
                     <TechStackProject project={project.techStack} />
                 </div>
-                <DialogHeader></DialogHeader>
 
                 {project.info && (
                     <p

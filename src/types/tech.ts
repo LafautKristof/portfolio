@@ -1,4 +1,3 @@
-// types/tech.ts
 export type StackVariant = "light" | "dark" | "grayscale";
 
 export interface Tech {
