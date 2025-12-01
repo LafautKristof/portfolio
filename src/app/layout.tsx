@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Quantico } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
+import Script from "next/script";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -44,6 +45,11 @@ export default function RootLayout({
                 <main className="px-4 mx-auto max-w-4xl relative">
                     {children}
                 </main>
+                <Script
+                    async
+                    src="https://cloud.umami.is/script.js"
+                    data-website-id="85b093df-6369-4ea8-8f58-efa8b44741fb"
+                />
             </body>
         </html>
     );
