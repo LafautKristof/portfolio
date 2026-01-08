@@ -1,7 +1,6 @@
 "use client";
 import { techStack } from "@/app/helpers/techstack";
 import { motion } from "framer-motion";
-import { Separator } from "@/components/ui/separator";
 import { staggerContainer } from "@/app/helpers/motionVariants";
 import TechBadge from "../TechBadge";
 
